@@ -38,12 +38,13 @@ public class Uso_empleados {
                         salario = Double.parseDouble(JOptionPane.showInputDialog(null, "Introduce el salario del empleado", "Empleado Comercial", 1));
                         comision = Double.parseDouble(JOptionPane.showInputDialog(null, "Introduce la comision del Empleado", "Empleado Comercial", 1));
                         c = new Comercial(comision, nombre, edad, salario);
-
-                        if (c.havePlusSalario()) {
+                        c.havePlusSalario();
+                        JOptionPane.showMessageDialog(null,c.toString()); //Podemos usar la siguiente linea de codigo para y nos ahorramos el codigo siguiente
+                       /* if (c.havePlusSalario()) {
                             JOptionPane.showMessageDialog(null, c.toString() + "\nEmpleado PLUS, su Salario es de:" + c.getSalario(), "Empleado PLUS", 1);
                         } else {
                             JOptionPane.showMessageDialog(null, "\n" + c.toString() + "\nNo Cumple con los requisitos para ser un Empleado Plus", "Empleado Comercial", 1);
-                        }
+                        }*/
                         break;
                     }
                     case 2: {

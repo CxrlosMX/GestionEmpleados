@@ -6,6 +6,7 @@
 package Comercial;
 
 import Empleado.Empleado;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,8 +39,11 @@ public class Comercial extends Empleado {
         if (super.getEdad() > 30 && this.comision > 200) {
             double n = super.getSalario() + Empleado.getPLUS();
             super.setSalario(n);
+              JOptionPane.showMessageDialog(null, "Se le ha agregado un PLUS al empleado " + super.getNombre() + "\n" + "Su salario actual es: " + n, "EMPLEADO PLUS", 1);
+         
             return true;
         }
+        JOptionPane.showMessageDialog(null, "El empleado no cumple con los requisitos", "EMPLEADO COMERCIAL", 1);
         return false;
 
     }
